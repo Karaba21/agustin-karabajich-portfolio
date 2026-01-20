@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fafafa;
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 24px 24px;
+  overflow-x: hidden;
+}
+
+/* New Text Outline Style */
+.text-outline {
+  -webkit-text-stroke: 1px #cbd5e1; /* slate-300 */
+  color: transparent;
+}
+.text-outline-strong {
+  -webkit-text-stroke: 2px #e2e8f0; /* slate-200 */
+  color: transparent;
+}
+
+/* Scrollbar hiding with utility class usually, but keeping customs */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
