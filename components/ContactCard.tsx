@@ -16,7 +16,7 @@ export const ContactCard: React.FC = () => {
         <div className="flex-1 min-w-0 flex flex-col gap-3">
           <div>
             <p className="text-sm font-black italic text-slate-900 lowercase mb-1">contact/</p>
-            <h4 className="font-black italic uppercase text-xl text-slate-900 group-hover:text-indigo-600 transition-colors">Let's Collaborate</h4>
+            <h4 className="font-black italic uppercase text-xl text-slate-900 group-hover:text-indigo-600 transition-colors">Let's Work Together</h4>
             <p className="text-sm text-slate-500 mt-1 truncate italic font-medium">Available for freelance & full-time.</p>
           </div>
 

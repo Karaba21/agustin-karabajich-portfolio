@@ -10,10 +10,12 @@ import { motion, Variants } from 'framer-motion';
 import { HeroCard } from '../components/HeroCard';
 import { TechStackCard } from '../components/TechStackCard';
 import { ProjectShowcaseCard } from '../components/ProjectShowcaseCard';
+import { ServicesCard } from '../components/ServicesCard';
 import { SmallProjectCard } from '../components/SmallProjectCard';
 import { ActivityCard } from '../components/ActivityCard';
 import { ContactCard } from '../components/ContactCard';
 import { FloatingNav } from '../components/FloatingNav';
+import { ProjectsArchive } from '../components/ProjectsArchive';
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -60,48 +62,19 @@ export default function Home() {
                     <ContactCard />
                 </motion.div>
 
-                {/* Middle Row: Showcase, Fintech, E-commerce, Social */}
+                {/* Middle Row: Showcase & Services */}
                 <motion.div variants={itemVariants} className="md:col-span-2 lg:col-span-6 lg:row-span-2">
                     <ProjectShowcaseCard />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="md:col-span-1 lg:col-span-3 lg:row-span-2">
-                    <SmallProjectCard
-                        title="Fintech Dashboard"
-                        subtitle="Data Visualization"
-                        icon={<BarChart3 size={20} className="text-indigo-600" />}
-                        accentColor="bg-indigo-50"
-                        type="chart"
-                    />
+                <motion.div variants={itemVariants} className="md:col-span-2 lg:col-span-6 lg:row-span-2">
+                    <ServicesCard />
                 </motion.div>
 
-                <motion.div variants={itemVariants} className="md:col-span-1 lg:col-span-3 lg:row-span-1">
-                    <SmallProjectCard
-                        title="E-commerce Experience"
-                        subtitle="Shopify Headless"
-                        icon={<ShoppingBag size={20} className="text-indigo-600" />}
-                        accentColor="bg-indigo-50"
-                        type="standard"
-                    />
+                {/* Bottom Row: Projects Archive */}
+                <motion.div variants={itemVariants} className="col-span-1 md:col-span-2 lg:col-span-12">
+                    <ProjectsArchive />
                 </motion.div>
-
-                <motion.div variants={itemVariants} className="md:col-span-1 lg:col-span-3 lg:row-span-1">
-                    <SmallProjectCard
-                        title="Social Media App"
-                        subtitle="Real-time Interactions"
-                        icon={<MessageCircle size={20} className="text-pink-500" />}
-                        accentColor="bg-pink-50"
-                        hoverColor="group-hover:text-pink-400"
-                        type="standard"
-                    />
-                </motion.div>
-
-                {/* Bottom Row: Activity & Contact */}
-                <motion.div variants={itemVariants} className="md:col-span-1 lg:col-span-4 lg:row-span-1">
-                    <ActivityCard />
-                </motion.div>
-
-
             </motion.div>
 
             <FloatingNav />

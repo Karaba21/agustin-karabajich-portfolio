@@ -71,13 +71,14 @@ export const HeroCard: React.FC = () => {
           transition={{ delay: 0.9 }}
           className="flex gap-4 items-center"
         >
-          <motion.button
+          <motion.a
+            href="#projects-archive"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-slate-900 text-white px-8 py-4 rounded-full font-black italic text-sm tracking-wider uppercase hover:bg-indigo-600 transition-colors duration-300 shadow-lg shadow-indigo-200/50 hover:shadow-indigo-500/30"
           >
-            View Selected Works
-          </motion.button>
+            View All Projects
+          </motion.a>
           <motion.button
             whileHover={{ scale: 1.1, rotate: 15 }}
             className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-600 group bg-white"
