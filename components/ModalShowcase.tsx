@@ -7,6 +7,13 @@ interface ModalShowcaseProps {
     onClose: () => void;
 }
 
+const images = [
+    "proper.png",
+    "proper.png",
+    "proper.png",
+    "proper.png",
+]
+
 export const ModalShowcase: React.FC<ModalShowcaseProps> = ({ isOpen, onClose }) => {
     return (
         <AnimatePresence>
