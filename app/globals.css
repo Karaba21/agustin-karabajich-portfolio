@@ -9,6 +9,11 @@ body {
   overflow-x: hidden;
 }
 
+.dark body {
+  background-color: #020617; /* slate-950 */
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+}
+
 /* New Text Outline Style */
 .text-outline {
   -webkit-text-stroke: 1px #cbd5e1; /* slate-300 */

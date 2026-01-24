@@ -14,7 +14,6 @@ import { ServicesCard } from '../components/ServicesCard';
 import { SmallProjectCard } from '../components/SmallProjectCard';
 import { ActivityCard } from '../components/ActivityCard';
 import { ContactCard } from '../components/ContactCard';
-import { FloatingNav } from '../components/FloatingNav';
 import { ProjectsArchive } from '../components/ProjectsArchive';
 
 const containerVariants: Variants = {
@@ -77,7 +76,6 @@ export default function Home() {
                 </motion.div>
             </motion.div>
 
-            <FloatingNav />
         </main>
     );
 }
