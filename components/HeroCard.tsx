@@ -79,12 +79,6 @@ export const HeroCard: React.FC = () => {
           >
             View All Projects
           </motion.a>
-          <motion.button
-            whileHover={{ scale: 1.1, rotate: 15 }}
-            className="w-12 h-12 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors text-slate-600 group bg-white"
-          >
-            <ArrowDown size={20} className="group-hover:translate-y-1 transition-transform" />
-          </motion.button>
         </motion.div>
       </div>
     </div>

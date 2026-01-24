@@ -1,5 +1,5 @@
 import React from 'react';
-import { Database, CreditCard, Server, Users, Zap } from 'lucide-react';
+import { Database, CreditCard, Server, Users, Zap, ShoppingBag, Wallet, Mail } from 'lucide-react';
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 export const ServicesCard: React.FC = () => {
@@ -26,9 +26,10 @@ export const ServicesCard: React.FC = () => {
     const services = [
         { name: 'SUPABASE', icon: <Database size={24} className="text-emerald-500" /> },
         { name: 'STRIPE', icon: <CreditCard size={24} className="text-indigo-500" /> },
-        { name: 'VERCEL', icon: <Server size={24} className="text-slate-900" /> },
-        { name: 'CLERK', icon: <Users size={24} className="text-purple-500" /> },
-        { name: 'LEMON SQUEEZY', icon: <Zap size={24} className="text-yellow-500" /> },
+        { name: 'NETLIFY', icon: <Server size={24} className="text-slate-900" /> },
+        { name: 'BREVO', icon: <Mail size={24} className="text-purple-500" /> },
+        { name: 'LEMON SQUEEZY', icon: <CreditCard size={24} className="text-yellow-500" /> },
+        { name: 'SHOPIFY', icon: <ShoppingBag size={24} className="text-emerald-500" /> },
     ];
 
     return (
@@ -46,7 +47,7 @@ export const ServicesCard: React.FC = () => {
                 <div style={{ transform: "translateZ(20px)" }}>
                     <p className="text-sm font-bold italic text-slate-400 mb-2">services/ BACKEND & PAYMENTS</p>
                     <h3 className="text-3xl font-black italic uppercase text-slate-900 leading-none tracking-tight">
-                        TECH STACK &<br />INTEGRATIONS
+                        SERVICES &<br />INTEGRATIONS
                     </h3>
                 </div>
 

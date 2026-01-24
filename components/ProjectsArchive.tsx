@@ -8,6 +8,7 @@ interface ArchiveProject {
     src: string;
     tags: string[];
     link: string;
+    description: string;
     hoverColor: string; // Tailwind class for hover text color
     color: string; // Hex color for button background
 }
@@ -17,46 +18,61 @@ const ARCHIVE_PROJECTS: ArchiveProject[] = [
         id: "gp-automoviles",
         title: "GP Automoviles",
         src: "gp-automoviles.png",
-        tags: ["OpenWeather", "React"],
+        tags: ["TypeScript", "Next.js", "Tailwind", "Supabase", "React"],
         link: "https://gpautomovilesuy.com",
+        description: "Fully responsive website for a car dealership. Supabase integration for user authentication and data management. Brevo integration for email marketing.",
         hoverColor: "group-hover:text-blue-500",
-        color: "#3b82f6",
+        color: "#6366f1",
     },
     {
         id: "cockpit",
         title: "Cockpit",
         src: "cockpit.png",
-        tags: ["Gatsby", "SCSS"],
+        tags: ["TypeScript", "Next.js", "Tailwind", "Shopify", "React"],
         link: "https://cockpituy.com",
+        description: "E-commerce website for a cockpit store. Shopify integration for product management and checkout. Supabase integration for user authentication and data management.",
         hoverColor: "group-hover:text-indigo-500",
-        color: "#6366f1",
-    },
-    {
-        id: "crypto-tracker",
-        title: "Crypto Tracker",
-        src: "crypto-tracker.png",
-        tags: ["CoinGecko", "Vue"],
-        link: "https://crypto-tracker.agustin.com",
-        hoverColor: "group-hover:text-orange-500",
         color: "#f97316",
     },
     {
-        id: "note-taking-app",
-        title: "Note Taking App",
-        src: "note-taking-app.png",
-        tags: ["Firebase", "Next.js"],
-        link: "https://notetakingapp.agustin.com",
+        id: "sav-solutions",
+        title: "SAV Solutions",
+        src: "sav.png",
+        tags: ["TypeScript", "Next.js", "Tailwind", "React"],
+        link: "https://savsolutionsuy.com",
+        description: "Landing page for web development and IT services company",
+        hoverColor: "group-hover:text-orange-500",
+        color: "#3a18b8ff",
+    },
+    {
+        id: "infinite-agency",
+        title: "Infinite Agency CRM",
+        src: "crm.png",
+        tags: ["HTML", "CSS", "JavaScript"],
+        link: "https://infiniteagencycrm.com",
+        description: "Landing page for CRM company",
         hoverColor: "group-hover:text-yellow-500",
         color: "#eab308",
     },
     {
-        id: "task-master",
-        title: "Task Master",
-        src: "task-master.png",
-        tags: ["TypeScript"],
-        link: "https://taskmaster.agustin.com",
+        id: "glink",
+        title: "Glink",
+        src: "glink.png",
+        tags: ["TypeScript", "Next.js", "Tailwind", "Shopify", "React"],
+        link: "https://glinkuy.com",
+        description: "E-commerce website for a product store. Shopify integration for product management and checkout.",
         hoverColor: "group-hover:text-emerald-500",
         color: "#10b981",
+    },
+    {
+        id: "innowave",
+        title: "Innowave",
+        src: "innowave.png",
+        tags: ["TypeScript", "Next.js", "Tailwind", "Shopify", "React"],
+        link: "https://innowaveuy.com",
+        description: "E-commerce website for a product store. Shopify integration for product management and checkout.",
+        hoverColor: "group-hover:text-emerald-500",
+        color: "#2b4fc6ff",
     },
 ];
 
@@ -76,27 +92,25 @@ export const ProjectsArchive = () => {
             </div>
 
             {/* Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {ARCHIVE_PROJECTS.map((project) => (
                     <motion.div
                         key={project.id}
                         whileHover={{ y: -5 }}
-                        className="group relative bg-white rounded-[2rem] p-6 border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-50/50 transition-all duration-300 cursor-pointer"
+                        className="group relative bg-white rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-indigo-50/50 transition-all duration-300 cursor-pointer overflow-hidden"
                     >
-                        {/* Icon Container - Faint gray background, default gray icon */}
-                        <div className="mb-6 h-32 bg-slate-50 rounded-2xl flex items-center justify-center overflow-hidden border border-slate-100 group-hover:bg-slate-100 transition-colors duration-300">
-                            {/* Icon Wrapper for transforms */}
-                            <div className={`transform group-hover:scale-110 transition-all duration-300`}>
-                                {/* Icon itself changes color on hover */}
-                                <div className={`text-slate-300 transition-colors duration-300 ${project.hoverColor}`}>
-                                    <img src={project.src} alt={project.title} />
-                                </div>
-                            </div>
+                        {/* Image Container */}
+                        <div className="h-48 bg-slate-50 overflow-hidden border-b border-slate-100 relative group-hover:shadow-sm transition-all duration-300">
+                            <img
+                                src={project.src}
+                                alt={project.title}
+                                className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                            />
                         </div>
 
 
                         {/* Content */}
-                        <div className="pb-8">
+                        <div className="p-6 pb-8">
                             <h3 className="text-lg font-black italic uppercase text-slate-900 mb-3 tracking-tight">
                                 {project.title}
                             </h3>
@@ -111,6 +125,9 @@ export const ProjectsArchive = () => {
                                     </span>
                                 ))}
                             </div>
+                            <p className="text-sm font-medium text-slate-600 normal-case leading-relaxed mt-4 group-hover/icon:text-slate-800 transition-colors">
+                                {project.description}
+                            </p>
                             <motion.a
                                 href={project.link}
                                 target="_blank"

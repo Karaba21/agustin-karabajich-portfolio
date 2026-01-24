@@ -9,7 +9,7 @@ export const ContactCard: React.FC = () => {
           <img
             alt="Agustin"
             className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo4u7b9Suk5oDG1dijk9OzCR6jl-fQF608u79nCDlV5t2A00dZj142XD7r9gP--5NU_dukmszFDO-QnqBhtrc_IXSnJhf7F3Uz0Hu0hsuGD15t9hOELRjdAgPgVfWlMGYsXeR0P29Ir12OqXaanx3iuCGyPvqxabRmYDXQ3OObqGAYJXNIng-jq3Cx7PKh27XOjN7fjWpbsRDaxcRLwbHdan-W-GHylEkxbPtzg5vV08XD76WF4Hv2h0LG4AgVBlFHflFMCsKsDOlD"
+            src="foto-mia.jpg"
           />
         </div>
 
@@ -39,9 +39,9 @@ export const ContactCard: React.FC = () => {
             >
               <Github size={20} />
             </a>
-            <div className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 group-hover:bg-indigo-600 group-hover:text-white group-hover:scale-110 transition-all duration-300 shadow-sm">
+            <a href="mailto: agustin.karabajich@gmail.com" className="w-12 h-12 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-indigo-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-sm">
               <Mail size={20} />
-            </div>
+            </a>
           </div>
         </div>
       </div>
