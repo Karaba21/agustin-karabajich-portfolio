@@ -11,6 +11,7 @@ interface ArchiveProject {
     link: string;
     hoverColor: string;
     color: string;
+    inProcess?: boolean;
 }
 
 const ARCHIVE_PROJECTS: ArchiveProject[] = [
@@ -58,6 +59,7 @@ const ARCHIVE_PROJECTS: ArchiveProject[] = [
         link: "https://glinkuy.com",
         hoverColor: "group-hover:text-emerald-500",
         color: "#10b981",
+        inProcess: true,
     },
     {
         id: "innowave",
@@ -67,6 +69,7 @@ const ARCHIVE_PROJECTS: ArchiveProject[] = [
         link: "https://innowaveuy.com",
         hoverColor: "group-hover:text-emerald-500",
         color: "#2b4fc6ff",
+        inProcess: true,
     },
 ];
 
@@ -84,7 +87,8 @@ export const ProjectsArchive = () => {
                 "infinite-agency": "Landing page for CRM company",
                 "glink": "E-commerce website for a product store. Shopify integration for product management and checkout.",
                 "innowave": "E-commerce website for a product store. Shopify integration for product management and checkout."
-            }
+            },
+            inProcess: "In Process"
         },
         es: {
             label: "archivo/",
@@ -96,7 +100,8 @@ export const ProjectsArchive = () => {
                 "infinite-agency": "Landing page para empresa de CRM",
                 "glink": "E-commerce para tienda de productos. Integración con Shopify para gestión de productos y checkout.",
                 "innowave": "E-commerce para tienda de productos. Integración con Shopify para gestión de productos y checkout."
-            }
+            },
+            inProcess: "En Proceso"
         }
     };
 
@@ -126,6 +131,14 @@ export const ProjectsArchive = () => {
                     >
                         {/* Image Container */}
                         <div className="h-48 bg-slate-50 dark:bg-slate-900 overflow-hidden border-b border-slate-100 dark:border-slate-800 relative group-hover:shadow-sm transition-all duration-300">
+                            {project.inProcess && (
+                                <div className="absolute top-3 right-3 px-2 py-0.5 bg-white/90 dark:bg-slate-900/90 border border-slate-100 dark:border-slate-800 rounded-full shadow-sm z-10 backdrop-blur-sm flex items-center gap-1.5">
+                                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                                    <span className="text-[10px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300">
+                                        {t.inProcess}
+                                    </span>
+                                </div>
+                            )}
                             <img
                                 src={project.src}
                                 alt={project.title}
