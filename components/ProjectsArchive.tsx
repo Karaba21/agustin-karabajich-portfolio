@@ -45,7 +45,7 @@ const ARCHIVE_PROJECTS: ArchiveProject[] = [
         id: "infinite-agency",
         title: "Infinite Agency CRM",
         src: "crm.png",
-        tags: ["HTML", "CSS", "JavaScript"],
+        tags: ["TypeScript", "Next.js", "Tailwind", "React"],
         link: "https://infiniteagencycrm.com",
         hoverColor: "group-hover:text-yellow-500",
         color: "#eab308",

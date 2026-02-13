@@ -4,7 +4,7 @@ import { useLanguage } from './Providers';
 
 const technologies = [
   "React", "Next.js", "TypeScript", "Tailwind", "Framer Motion",
-  "Three.js", "Node.js", "Supabase", "Figma", "SQL"
+  "AI integration", "Node.js", "Supabase", "Figma", "SQL"
 ];
 
 export const TechStackCard: React.FC = () => {
